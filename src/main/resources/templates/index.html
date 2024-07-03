@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+
+	<title>Kulikuliner - Solusi Pusing Nyari Makan!!</title>
+
+	<link href="css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="index.html">
+          <span class="align-middle">Kulikuliner</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Halaman
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" th:href="@{/}">
+              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" th:href="@{/makanan/add}">
+              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Tambah Makanan</span>
+            </a>
+					</li>
+
+					
+				</ul>
+
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-feather="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3"><strong>Menu</strong> Utama Kulikuliner</h1>
+
+					<div class="row">
+						<div class="col-xl-12 d-flex">
+							<div class="w-100">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="card">
+											<div class="card-body">
+													<div class="col mt-0">
+														<h5 class="card-title">Sales</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="truck"></i>
+														</div>
+													</div>
+												<h1 class="mt-1 mb-3">2.382</h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Visitors</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="users"></i>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">14.212</h1>
+												<div class="mb-0">
+													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+									</div>
+                  					<div class="col-xl-6 col-xxl-7">
+                                        <div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Earnings</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="dollar-sign"></i>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">$21.300</h1>
+												<div class="mb-0">
+													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Orders</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="shopping-cart"></i>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">64</h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+                  					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                  <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 px-4">
+                    <h6 class="text-white text-capitalize ps-3">List Makanan Daerah</h6>
+                    <a th:href="@{/makanan/add}" class="btn btn-success float-end" style="margin-top:-35px;">
+                      <i class="fa fa-plus"></i> Tambah Makanan
+                    </a>
+                  </div>
+                </div>
+                <div class="card-body px-4 pb-2">
+                  <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0" id="tabel">
+                      <thead>
+                        <tr>
+                          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">No</th>
+                          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Nama Makanan</th>
+						  <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Asal Makanan</th>
+                          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Harga Rata-Rata</th>
+                          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">Deskripsi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr th:each="makanans, iterStat : ${makanan}">
+							<td th:text="${iterStat.index + 1}">
+								<div class="d-flex px-2 py-1">
+									<p class="mb-0 text-xs"></p>
+								</div>
+							</td>
+                          <td th:text="${makanans.nama_makanan}"> 
+                            <div class="d-flex px-2 py-1">
+                              <h4 class="mb-0 text-xs"></h4>
+                            </div>
+                          </td>
+                          <td th:text="${makanans.asal}">
+                            <p class="text-xs text-uppercase font-weight-bold mb-0"></p>
+                          </td>
+                          <td th:text="${makanans.harga}">
+                            <p class="text-xs text-uppercase font-weight-bold mb-0"></p>
+                          </td>
+                          <td th:text="${makanans.deskripsi}">
+                            <p class="text-xs font-weight-bold mb-0"></p>
+                          </td>
+                          <td class="align-middle">
+                            <a th:href="@{/makanan/ubahMakanan/{id}(id = ${makanans.id}) }" class="text-secondary font-weight-bold text-md" data-toggle="tooltip" data-original-title="Edit barang">
+                              <span class="badge badge-sm bg-warning"><i class="fa fa-pen"></i> Ubah</span>
+                            </a>
+							<a th:href="@{/makanan/deleteMakanan/{id}(id = ${makanans.id}) }" class="text-secondary font-weight-bold text-md" data-toggle="tooltip" data-original-title="Edit barang">
+								<span class="badge badge-sm bg-danger"><i class="fa fa-trash"></i> Hapus</span>
+							  </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Kulikuliner.website</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://akhmdrdlo.github.io/portfolio" target="_blank">Support</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+
+</body>
+
+</html>
