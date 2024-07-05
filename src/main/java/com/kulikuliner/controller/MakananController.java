@@ -21,6 +21,11 @@ public class MakananController {
         model.addAttribute("makanan", makananService.getAllMakanan());
         return "index";
     }
+
+    @GetMapping("/tentang")
+    public String showAbout(){
+        return "about";
+    }
     
     @GetMapping("/makanan/add")
     public String showMakananForm(Model model){
@@ -54,8 +59,6 @@ public class MakananController {
 
     @GetMapping("/makanan/deleteMakanan/{id}")
     public String deleteMakanan(@PathVariable("id") Long id, Model model) {
-        Makanan makanan = makananService.getMakananById(id);
-
         makananService.deleteMakanan(id);
         return "redirect:/";
     }

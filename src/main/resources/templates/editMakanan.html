@@ -22,120 +22,86 @@
 
 <body>
 	<div class="wrapper">
-		<nav id="sidebar" class="sidebar js-sidebar">
-			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
-          <span class="align-middle">Kulikuliner</span>
-        </a>
-
-				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Halaman
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" th:href="@{/}">
-                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-                        </a>
-					</li>
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" th:href="@{/makanan/add}">
-                        <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Tambah Makanan</span>
-                        </a>
-					</li>
-                    
-				</ul>
-
-			</div>
-		</nav>
-
 		<div class="main">
-			<nav class="navbar navbar-expand navbar-light navbar-bg">
-				<a class="sidebar-toggle js-sidebar-toggle">
-          <i class="hamburger align-self-center"></i>
-        </a>
-
-				<div class="navbar-collapse collapse">
-					<ul class="navbar-nav navbar-align">
-						<li class="nav-item dropdown">
-							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                <i class="align-middle" data-feather="settings"></i>
-              </a>
-
-							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img th:src="@{'/img/avatars/avatar.jpg'}" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
-              </a>
-							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Log out</a>
-							</div>
-						</li>
+			<!-- ======= Header ======= -->
+			<header id="header" class="d-flex align-items-center">
+				<div class="container d-flex align-items-center">
+			
+				  <div class="logo me-auto">
+					<h1><a th:href="@{/}">Kulikuliner</a></h1>
+					<!-- Uncomment below if you prefer to use an image logo -->
+					<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+				  </div>
+			
+				  <nav id="navbar" class="navbar order-last order-lg-0 px-4">
+					<ul>
+					  <li><a class="nav-link scrollto" th:href="@{/}">Dashboard</a></li>
+					  <li><a class="nav-link scrollto active" th:href="@{/makanan/add}">Tambah Makanan</a></li>
+					  <li><a class="nav-link scrollto" th:href="@{/tentang}">Tentang Kami</a></li>
 					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				  </nav><!-- .navbar -->
 				</div>
-			</nav>
-
+			  </header><!-- End Header -->
 			<main class="content">
-				<div class="container-fluid p-0">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header pb-0">
-                  <div class="d-flex">
-                    <h5 class="mb-0">Ubah Data Makanan!!</h5>
-                  </div>
-                </div>
-                <hr>
-                <div class="card-body" style="margin-top:-25px;">
-                  <form action="#" th:action="@{/makanan/update/{id}(id = ${makanan.id})}" th:object="${makanan}" method="post">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="example-text-input" class="form-control-label">Nama Makanan</label>
-                        <input class="form-control" id="nama_makanan" th:field="${makanan.nama_makanan}"  th:value="makanan.nama_makanan" autocomplete="off" type="text" placeholder="Nama Makanan....">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="example-text-input" class="form-control-label">Asal Daerah</label>
-                        <input class="form-control" id="asal" th:field="${makanan.asal}" th:value="makanan.asal"  autocomplete="off" type="text" placeholder="Asal Daerah....">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="example-text-input" class="form-control-label">Harga Rata-Rata</label>
-                        <input class="form-control" id="harga" th:field="${makanan.harga}" th:value="makanan.harga"  autocomplete="off" type="number" placeholder="Harga Rata-Rata....">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="example-text-input" class="form-control-label">Deskripsi Makanan</label>
-                        <textarea class="form-control" id="deskripsi" th:field="${makanan.deskripsi}" th:value="makanan.deskripsi" autocomplete="off" type="text" placeholder="Deskripsi Makanan...."></textarea>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-10">
-                        <button class="form-control btn btn-md btn-warning col-md-10" value="Submit" type="submit"><i class="fa fa-pen"></i> | Ubah Data Makanan </button>
-                      </div>
-                      <div class="col-md-2">
-                        <a class="form-control btn btn-md btn-secondary col-md-2" th:href="@{'/'}">
-                            <i class="fas fa-trash fa-sm fa-fw mr-2 text-gray-400"></i> | Kembali
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+				<div class="container-fluid mt-4 d-flex justify-content-center">
+					<div class="row">
+						<div class="col-lg-6">
+							<img th:src="@{'/img/photos/kulikuliner_about2.png'}" class="img-fluid" alt="rawr mana">
+						</div>
+						<div class="col-md-6">
+						  <div class="card">
+							<div class="card-header pb-0">
+							  <div class="d-flex">
+								<h5 class="mb-0">Ubah Data Makanan!!</h5>
+							  </div>
+							</div>
+							<hr>
+							<div class="card-body" style="margin-top:-25px;">
+							  <form action="#" th:action="@{/makanan/update/{id}(id = ${makanan.id})}" th:object="${makanan}" method="post">
+							  <div class="row">
+								<div class="col-md-6">
+								  <div class="form-group">
+									<label for="example-text-input" class="form-control-label">Nama Makanan</label>
+									<input class="form-control" id="nama_makanan" th:field="${makanan.nama_makanan}"  th:value="makanan.nama_makanan" autocomplete="off" type="text" placeholder="Nama Makanan....">
+								  </div>
+								</div>
+								<div class="col-md-6">
+								  <div class="form-group">
+									<label for="example-text-input" class="form-control-label">Asal Daerah</label>
+									<input class="form-control" id="asal" th:field="${makanan.asal}" th:value="makanan.asal"  autocomplete="off" type="text" placeholder="Asal Daerah....">
+								  </div>
+								</div>
+							  </div>
+							  <div class="row">
+								<div class="col-md-6">
+								  <div class="form-group">
+									<label for="example-text-input" class="form-control-label">Harga Rata-Rata</label>
+									<input class="form-control" id="harga" th:field="${makanan.harga}" th:value="makanan.harga"  autocomplete="off" type="number" placeholder="Harga Rata-Rata....">
+								  </div>
+								</div>
+								<div class="col-md-6">
+								  <div class="form-group">
+									<label for="example-text-input" class="form-control-label">Deskripsi Makanan</label>
+									<textarea class="form-control" id="deskripsi" th:field="${makanan.deskripsi}" th:value="makanan.deskripsi" autocomplete="off" type="text" placeholder="Deskripsi Makanan...."></textarea>
+								  </div>
+								</div>
+								<div class="row mt-4">
+								  <div class="col-md-8">
+									<button class="form-control btn btn-md btn-warning col-md-10" value="Submit" type="submit">Ubah Data Makanan </button>
+								  </div>
+								  <div class="col-md-4">
+									<a class="form-control btn btn-md btn-secondary col-md-2" th:href="@{'/'}">
+										Kembali
+									</a>
+								  </div>
+								</div>
+							  </div>
+							  </form>
+							</div>
+						  </div>
+						</div>
+					  </div>
 				</div>
 			</main>
 
@@ -177,4 +143,4 @@
 
 </body>
 
-</html> 
+</html>

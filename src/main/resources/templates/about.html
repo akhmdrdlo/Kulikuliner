@@ -36,73 +36,51 @@
 				  <nav id="navbar" class="navbar order-last order-lg-0 px-4">
 					<ul>
 					  <li><a class="nav-link scrollto" th:href="@{/}">Dashboard</a></li>
-					  <li><a class="nav-link scrollto active" th:href="@{/makanan/add}">Tambah Makanan</a></li>
-					  <li><a class="nav-link scrollto" th:href="@{/tentang}">Tentang Kami</a></li>
+					  <li><a class="nav-link scrollto" th:href="@{/makanan/add}">Tambah Makanan</a></li>
+					  <li><a class="nav-link scrollto active" th:href="@{/tentang}">Tentang Kami</a></li>
 					</ul>
 					<i class="bi bi-list mobile-nav-toggle"></i>
 				  </nav><!-- .navbar -->
 				</div>
 			  </header><!-- End Header -->
 			<main class="content">
-				<div class="container-fluid mt-4 d-flex justify-content-center">
-					<div class="row">
-						<div class="col-lg-6">
-						<div class="card">
-							<div class="card-header pb-0">
-							<div class="d-flex">
-								<h5 class="mb-0">Tambah Data Makanan!!</h5>
-							</div>
-							</div>
-							<hr>
-							<div class="card-body" style="margin-top:-25px;">
-								<form action="#" th:action="@{/makanan/save}" th:object="${makanan}" method="post">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label for="example-text-input" class="form-control-label">Nama Makanan</label>
-												<input class="form-control" id="nama_makanan" th:field="${makanan.nama_makanan}" autocomplete="off" type="text" placeholder="Nama Makanan....">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label for="example-text-input" class="form-control-label">Asal Daerah</label>
-												<input class="form-control" id="asal" th:field="${makanan.asal}"  autocomplete="off" type="text" placeholder="Asal Daerah....">
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label for="example-text-input" class="form-control-label">Harga Rata-Rata</label>
-												<input class="form-control" id="harga" th:field="${makanan.harga}"  autocomplete="off" type="number" placeholder="Harga Rata-Rata....">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label for="example-text-input" class="form-control-label">Deskripsi Makanan</label>
-												<textarea class="form-control" id="deskripsi" th:field="${makanan.deskripsi}"  autocomplete="off" type="text" placeholder="Deskripsi Makanan...."></textarea>
-											</div>
-										</div>
-										<div class="row mt-4">
-											<div class="col-md-8">
-												<button class="form-control btn btn-md btn-warning col-md-10" value="Submit" type="submit">Tambah Data Makanan </button>
-											</div>
-											<div class="col-md-4">
-												<a class="form-control btn btn-md btn-secondary col-md-2" th:href="@{'/'}">
-													Kembali
-												</a>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						</div>
-						<div class="col-lg-6">
-							<img th:src="@{'/img/photos/kulikuliner_about2.png'}" class="img-fluid" alt="rawr mana">
-						</div>
-					</div>
-				</div>
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team" style="margin-top: -7%;">
+        <div class="container">
+          <div class="section-title">
+            <h2>Team</h2>
+            <h4><strong>Orang dibalik website <span>Kulikuliner!!</span></strong> </h4>
+          </div>
+  
+          <div class="row text-center">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img th:src="@{../img/photos/azel.jpg}" alt="">
+                <h4>Azalia Fathimah Dhinah</h4>
+                <span>UI Designer</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img th:src="@{../img/photos/ridlo.jpg}" alt="">
+                <h4>Akhmad Ridlo Rifa'i</h4>
+                <span>FullStack Developer</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img th:src="@{../img/photos/dafa.jpg}" alt="">
+                <h4>Daffa Rabbani</h4>
+                <span>Researcher</span>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Team Section -->
 			</main>
 
 			<footer class="footer">
